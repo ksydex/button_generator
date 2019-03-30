@@ -1,4 +1,5 @@
-// vue.config.js
 module.exports = {
-   publicPath: '<button_generator>'
-  } 
+   publicPath: process.env.NODE_ENV === 'production'
+     ? '/button_generator/'
+     : '/'
+ }
